@@ -1,4 +1,5 @@
-# AgentForge
+# Code Forge
+
 
 A multi-agent code generation pipeline that takes a plain-English feature request and produces a reviewed, tested, and committed pull request — fully automated with a human approval gate before any code is pushed.
 
