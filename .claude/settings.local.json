@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk ls *)",
+      "Bash(rtk read *)",
+      "Bash(rtk pip *)",
+      "Bash(python3 -m venv /home/siddarth/projects/Resume/MultiAgentCode/.venv)",
+      "Bash(/home/siddarth/projects/Resume/MultiAgentCode/.venv/bin/pip install *)",
+      "Bash(PYTHONPATH=. /home/siddarth/projects/Resume/MultiAgentCode/.venv/bin/python -c ' *)",
+      "Bash(PYTHONPATH=. .venv/bin/python -c ' *)",
+      "Bash(.venv/bin/pip install *)"
+    ]
+  }
+}

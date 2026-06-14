@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(ANTHROPIC_API_KEY=sk-ant-test .venv/bin/python -c ' *)",
+      "Bash(docker --version)",
+      "Bash(/home/siddarth/projects/Resume/MultiAgentCode/.venv/bin/pip show *)",
+      "Bash(find /home/siddarth/projects/MyStuff -name \"*.py\" | wc -l *)",
+      "Read(//home/siddarth/projects/MyStuff/**)",
+      "Read(//home/siddarth/projects/Projectblock/**)",
+      "Read(//home/siddarth/projects/Aetheris-demo-main/**)",
+      "Bash(PYTHONPATH=. .venv/bin/python scripts/index_repo.py . --persist-dir .chroma)",
+      "Bash(PYTHONPATH=. .venv/bin/python -c ' *)",
+      "Bash(rtk docker *)",
+      "Bash(docker pull *)",
+      "Bash(rtk grep *)",
+      "Bash(ollama --version)",
+      "Bash(sh)",
+      "Bash(chmod +x /home/siddarth/projects/Resume/MultiAgentCode/scripts/setup_ollama.sh)",
+      "Bash(systemctl --user status ollama)",
+      "Bash(rtk systemctl *)"
+    ]
+  }
+}

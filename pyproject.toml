@@ -1,0 +1,41 @@
+[project]
+name = "multi-agent-code"
+version = "0.1.0"
+description = "Multi-agent code generation pipeline: plan → generate → review → test → PR"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40.0",
+    "openai>=1.0.0",
+    "langgraph>=0.2.45",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "sse-starlette>=2.1.0",
+    "pydantic>=2.9.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.27.0",
+]
+
+# Phase 2: Docker sandbox + test runner (docker CLI assumed available on host)
+# execution = ["docker>=7.0.0"]
+
+# Phase 3: Codebase RAG — chromadb bundles all-MiniLM-L6-v2 via onnxruntime
+rag = ["chromadb>=0.5.0"]
+
+# Phase 4: GitHub PR integration
+# github = ["PyGithub>=2.4.0"]
+
+# Phase 5: MCP server exposure
+mcp = ["fastmcp>=2.0", "httpx>=0.27.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
